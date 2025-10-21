@@ -1,0 +1,61 @@
+﻿korean_sentence,expected_title,rag_translation,rag_correct,normal_translation,normal_correct,both_correct,only_rag_correct,only_normal_correct,both_wrong
+부산행은 정말 감동적인 영화였다.,Train to Busan,"""Train to Busan was truly an emotional movie.""",True,Train to Busan was truly an emotional movie.,True,True,False,False,False
+어제 부산행를 봤는데 너무 재미있었어.,Train to Busan,"""I watched Train to Busan yesterday, and it was so much fun.""",True,"I watched ""Train to Busan"" yesterday, and it was so much fun.",True,True,False,False,False
+부산행은 2016년 최고의 작품이다.,Train to Busan,"""Train to Busan is the best work of 2016.""",True,"""Train to Busan is the best work of 2016.""",True,True,False,False,False
+아가씨은 정말 감동적인 영화였다.,The Handmaiden,"""The Handmaiden was truly a touching movie.""",True,"""Lady"" was truly an emotional movie.",False,False,True,False,False
+어제 아가씨를 봤는데 너무 재미있었어.,The Handmaiden,"""I watched The Handmaiden yesterday, and it was so much fun.""",True,"I saw the young lady yesterday, and it was so much fun.",False,False,True,False,False
+아가씨은 2016년 최고의 작품이다.,The Handmaiden,"""The Handmaiden is the best work of 2016.""",True,"""The Handmaiden is the best work of 2016.""",True,True,False,False,False
+괴물은 정말 감동적인 영화였다.,The Host,"""The Host was truly a moving film.""",True,The monster was truly an impressive movie.,False,False,True,False,False
+어제 괴물를 봤는데 너무 재미있었어.,The Host,"""I watched The Host yesterday, and it was so much fun.""",True,"I saw a monster yesterday, and it was so much fun.",False,False,True,False,False
+괴물은 2006년 최고의 작품이다.,The Host,"""The Host is the best work of 2006.""",True,The Monster is the best work of 2006.,False,False,True,False,False
+아이 캔 스피크은 정말 감동적인 영화였다.,I Can Speak,"""I Can Speak was truly an inspiring movie.""",True,"""I Can Speak"" was a truly touching movie.",True,True,False,False,False
+어제 아이 캔 스피크를 봤는데 너무 재미있었어.,I Can Speak,"""I watched I Can Speak yesterday, and it was so much fun.""",True,"I watched ""I Can Speak"" yesterday, and it was so much fun.",True,True,False,False,False
+아이 캔 스피크은 2017년 최고의 작품이다.,I Can Speak,"""I Can Speak is the best work of 2017.""",True,"""I Can Speak"" is the best work of 2017.",True,True,False,False,False
+추격자은 정말 감동적인 영화였다.,The Chaser,"""The Chaser was truly an inspiring movie.""",True,"""The Chaser"" was truly an emotional movie.",True,True,False,False,False
+어제 추격자를 봤는데 너무 재미있었어.,The Chaser,"""I watched The Chaser yesterday, and it was so much fun.""",True,"I watched ""The Chaser"" yesterday and it was so interesting.",True,True,False,False,False
+추격자은 2008년 최고의 작품이다.,The Chaser,"""The Chaser is the best work of 2008.""",True,The Chaser is the best work of 2008.,True,True,False,False,False
+터널은 정말 감동적인 영화였다.,Tunnel,"""Tunnel was truly an emotional movie.""",True,The Tunnel was truly an inspiring movie.,True,True,False,False,False
+어제 터널를 봤는데 너무 재미있었어.,Tunnel,"""I watched a tunnel yesterday, and it was so much fun.""",True,"I watched ""Tunnel"" yesterday and it was really fun.",True,True,False,False,False
+터널은 2016년 최고의 작품이다.,Tunnel,"""The Tunnel is the best work of 2016.""",True,The Tunnel is the best work of 2016.,True,True,False,False,False
+마더은 정말 감동적인 영화였다.,Mother,"""Mother was truly an emotional movie.""",True,Mother was truly an emotional movie.,True,True,False,False,False
+어제 마더를 봤는데 너무 재미있었어.,Mother,"""I watched Mother yesterday, and it was so much fun.""",True,"I watched Mother yesterday, and it was really fun.",True,True,False,False,False
+마더은 2009년 최고의 작품이다.,Mother,"""Mother is the best work of 2009.""",True,Mother is the best work of 2009.,True,True,False,False,False
+범죄도시은 정말 감동적인 영화였다.,The Outlaws,"""The Outlaws was truly an inspiring movie.""",True,"""The Outlaws was truly an inspiring movie.""",True,True,False,False,False
+어제 범죄도시를 봤는데 너무 재미있었어.,The Outlaws,"""I watched The Outlaws yesterday, and it was so much fun.""",True,"I watched ""Crime City"" yesterday and it was so much fun.",False,False,True,False,False
+범죄도시은 2017년 최고의 작품이다.,The Outlaws,"""The Outlaws is the best work of 2017.""",True,"""Crime City"" is the best work of 2017.",False,False,True,False,False
+거룩한 밤: 데몬 헌터스은 정말 감동적인 영화였다.,Holy Night: Demon Hunters,"""Holy Night: Demon Hunters was truly an inspiring movie.""",True,Holy Night: Demon Hunters was truly an inspiring movie.,True,True,False,False,False
+어제 거룩한 밤: 데몬 헌터스를 봤는데 너무 재미있었어.,Holy Night: Demon Hunters,"""I watched Holy Night: Demon Hunters yesterday, and it was so much fun.""",True,"I watched ""Holy Night: Demon Hunters"" yesterday, and it was so much fun.",True,True,False,False,False
+거룩한 밤: 데몬 헌터스은 2025년 최고의 작품이다.,Holy Night: Demon Hunters,"""Holy Night: Demon Hunters is the best work of 2025.""",True,Holy Night: Demon Hunters is the best work of 2025.,True,True,False,False,False
+사마귀은 정말 감동적인 영화였다.,Mantis,"""Mantis was truly an inspiring movie.""",True,The Mantis was truly an inspiring movie.,True,True,False,False,False
+어제 사마귀를 봤는데 너무 재미있었어.,Mantis,"""I saw a mantis yesterday, and it was so interesting.""",True,"I saw a mantis yesterday, and it was really interesting.",True,True,False,False,False
+사마귀은 2025년 최고의 작품이다.,Mantis,"""The Mantis is the best work of 2025.""",True,"""The Mantis is the best work of 2025.""",True,True,False,False,False
+굿뉴스은 정말 감동적인 영화였다.,Good News,"""Good News was truly an inspiring movie.""",True,Good News was truly an inspiring movie.,True,True,False,False,False
+어제 굿뉴스를 봤는데 너무 재미있었어.,Good News,"""I watched Good News yesterday, and it was so much fun.""",True,"I watched Good News yesterday, and it was really interesting.",True,True,False,False,False
+굿뉴스은 2025년 최고의 작품이다.,Good News,"""Good News is the best work of 2025.""",True,Good News is the best work of 2025.,True,True,False,False,False
+기생충은 정말 감동적인 영화였다.,Parasite,"""Parasite was truly an emotional movie.""",True,Parasite was truly an impressive movie.,True,True,False,False,False
+어제 기생충를 봤는데 너무 재미있었어.,Parasite,"""I watched Parasite yesterday and it was so much fun.""",True,I watched Parasite yesterday and it was so much fun.,True,True,False,False,False
+기생충은 2019년 최고의 작품이다.,Parasite,"""Parasite is the best work of 2019.""",True,Parasite is the best film of 2019.,True,True,False,False,False
+가족의 재구성은 정말 감동적인 영화였다.,Family Reconstruction,"""Family Reconstruction was truly an emotional movie.""",True,The reconfiguration of family was truly an inspiring movie.,False,False,True,False,False
+어제 가족의 재구성를 봤는데 너무 재미있었어.,Family Reconstruction,"""I watched Family Reconstruction yesterday, and it was so much fun.""",True,"I watched the family reunion yesterday, and it was so much fun.",False,False,True,False,False
+가족의 재구성은 2017년 최고의 작품이다.,Family Reconstruction,"""Family Reconstruction is the best work of 2017.""",True,The reconfiguration of family is the best work of 2017.,False,False,True,False,False
+친구엄마은 정말 감동적인 영화였다.,Buddy's Mom,"""Buddy's Mom was a really touching movie.""",True,"""Friend's Mom"" was a really touching movie.",False,False,True,False,False
+어제 친구엄마를 봤는데 너무 재미있었어.,Buddy's Mom,"""I saw Buddy's Mom yesterday, and it was so much fun.""",True,"I saw my friend's mom yesterday, and it was really fun.",False,False,True,False,False
+친구엄마은 2015년 최고의 작품이다.,Buddy's Mom,"""Buddy's Mom is the best work of 2015.""",True,"""Friend's Mom"" is the best work of 2015.",False,False,True,False,False
+전지적 독자 시점은 정말 감동적인 영화였다.,Omniscient Reader: The Prophecy,"""Omniscient Reader: The Prophecy was truly an emotional movie.""",True,"""Omniscient Reader's Viewpoint"" was truly an inspiring movie.",False,False,True,False,False
+어제 전지적 독자 시점를 봤는데 너무 재미있었어.,Omniscient Reader: The Prophecy,"""I watched Omniscient Reader: The Prophecy yesterday, and it was so much fun.""",True,"I watched ""Omniscient Reader's Viewpoint"" yesterday and it was so much fun.",False,False,True,False,False
+전지적 독자 시점은 2025년 최고의 작품이다.,Omniscient Reader: The Prophecy,"""Omniscient Reader: The Prophecy is the best work of 2025.""",True,"""Omniscient Reader's Viewpoint is the best work of 2025.""",False,False,True,False,False
+아가씨은 정말 감동적인 영화였다.,The Handmaiden,"""The Handmaiden was truly a touching movie.""",True,"""Lady"" was truly an emotional movie.",False,False,True,False,False
+어제 아가씨를 봤는데 너무 재미있었어.,The Handmaiden,"""I watched The Handmaiden yesterday, and it was so much fun.""",True,"I saw the young lady yesterday, and it was really fun.",False,False,True,False,False
+아가씨은 2016년 최고의 작품이다.,The Handmaiden,"""The Handmaiden is the best work of 2016.""",True,"""The Handmaiden is the best work of 2016.""",True,True,False,False,False
+악인전은 정말 감동적인 영화였다.,"The Gangster, the Cop, the Devil","""The Gangster, the Cop, the Devil was truly an impressive movie.""",True,"""Villain's Journey"" was truly an emotional movie.",False,False,True,False,False
+어제 악인전를 봤는데 너무 재미있었어.,"The Gangster, the Cop, the Devil","""I watched The Outlaws yesterday, and it was so much fun.""",False,"I watched ""The Villainess"" yesterday, and it was so much fun.",False,False,False,False,True
+악인전은 2019년 최고의 작품이다.,"The Gangster, the Cop, the Devil","""The Gangster, the Cop, the Devil is the best work of 2019.""",True,"""The Outlaws is the best work of 2019.""",False,False,True,False,False
+범죄도시 4은 정말 감동적인 영화였다.,The Roundup: Punishment,"""The Roundup: Punishment was truly an inspiring movie.""",True,Crime City 4 was truly an emotional movie.,False,False,True,False,False
+어제 범죄도시 4를 봤는데 너무 재미있었어.,The Roundup: Punishment,"""I watched The Roundup: Punishment yesterday, and it was so much fun.""",True,"I watched Crime City 4 yesterday, and it was so much fun.",False,False,True,False,False
+범죄도시 4은 2024년 최고의 작품이다.,The Roundup: Punishment,"""The Roundup: Punishment is the best work of 2024.""",True,"""Crime City 4 is the best work of 2024.""",False,False,True,False,False
+요즘 유행하는 섹스모임은 정말 감동적인 영화였다.,Hot Sex Club,"""Hot Sex Club was truly an inspiring movie.""",True,The sex meeting that is trending these days was truly an inspiring movie.,False,False,True,False,False
+어제 요즘 유행하는 섹스모임를 봤는데 너무 재미있었어.,Hot Sex Club,"""I watched Hot Sex Club yesterday, and it was so much fun.""",True,"I saw a trending sex party yesterday, and it was really fun.",False,False,True,False,False
+요즘 유행하는 섹스모임은 2019년 최고의 작품이다.,Hot Sex Club,"""Hot Sex Club is the best work of 2019.""",True,The trending sex gatherings these days are the best work of 2019.,False,False,True,False,False
+"그 시절, 우리가 좋아했던 소녀은 정말 감동적인 영화였다.",You Are the Apple of My Eye,"""You Are the Apple of My Eye was truly an emotional movie.""",True,"That time, the girl we liked was truly an emotional movie.",False,False,True,False,False
+"어제 그 시절, 우리가 좋아했던 소녀를 봤는데 너무 재미있었어.",You Are the Apple of My Eye,"""I watched You Are the Apple of My Eye yesterday, and it was so much fun.""",True,"Yesterday, I saw the girl we liked back in the day, and it was so much fun.",False,False,True,False,False
+"그 시절, 우리가 좋아했던 소녀은 2025년 최고의 작품이다.",You Are the Apple of My Eye,"""You Are the Apple of My Eye is the best work of 2025.""",True,"That time, the girl we liked is the best work of 2025.",False,False,True,False,False

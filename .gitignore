@@ -1,0 +1,6 @@
+# .gitignore
+.env
+*.pyc
+__pycache__/
+data/movie_titles.csv
+*.log

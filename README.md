@@ -257,7 +257,7 @@ MIT License - see [LICENSE](LICENSE) file for details
 ## 👤 Author
 
 **Your Name**
-- GitHub: [@your-username](https://github.com/exom9434)
+- GitHub: [@exom9434](https://github.com/exom9434)
 - Email: silverbreak1@gmail.com 
 - LinkedIn: [JaeGeing No](www.linkedin.com/in/jaegeing-no-71b75125a)
 

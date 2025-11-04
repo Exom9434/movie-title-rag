@@ -20,7 +20,7 @@ client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 
 # Embedding model configuration
 EMBEDDING_MODEL = "text-embedding-3-small"
-CHAT_MODEL = "gpt-4o-mini"  # Using mini for cost savings (gpt-4o also available)
+CHAT_MODEL = "gpt-4o-mini" 
 
 
 class MovieTitleRAGTranslator:

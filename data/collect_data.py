@@ -186,7 +186,7 @@ def main():
     
     # 1. Collect popular Korean movies
     print("1️⃣ Collecting popular Korean movies...")
-    movies = get_popular_korean_movies(num_pages=5)  # About 100 movies
+    movies = get_popular_korean_movies(num_pages=5) 
     print(f"   Movies collected: {len(movies)}\n")
     
     # 2. Extract Korean-English title pairs

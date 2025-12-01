@@ -1,6 +1,5 @@
 """
 Movie title RAG translation system
-Personal project reimplementation of RAG approach developed at the company
 """
 
 import os
@@ -20,7 +19,7 @@ client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 
 # Embedding model configuration
 EMBEDDING_MODEL = "text-embedding-3-small"
-CHAT_MODEL = "gpt-4o-mini"  # Using mini for cost savings (gpt-4o also available)
+CHAT_MODEL = "gpt-4o-mini"  # Using mini for cost savings
 
 
 class MovieTitleRAGTranslator:
@@ -52,12 +51,6 @@ class MovieTitleRAGTranslator:
     def _get_embedding(self, text: str) -> np.ndarray:
         """
         Convert text to embedding vector
-        
-        Args:
-            text: Text to embed
-            
-        Returns:
-            Embedding vector
         """
         text = text.replace("\n", " ")
         response = client.embeddings.create(
@@ -73,7 +66,7 @@ class MovieTitleRAGTranslator:
         """
         # Load from cache if exists
         if os.path.exists(self.embeddings_cache_path):
-            print(f"📦 Loading cached embeddings...")
+            print(f"Loading cached embeddings...")
             with open(self.embeddings_cache_path, 'rb') as f:
                 cache = pickle.load(f)
                 self.embeddings = cache['embeddings']
@@ -82,10 +75,10 @@ class MovieTitleRAGTranslator:
             # Check if cache matches current data
             current_titles = self.df['korean_title'].tolist()
             if cached_titles == current_titles:
-                print(f"✅ Using cached embeddings ({len(self.embeddings)} items)")
+                print(f"Using cached embeddings ({len(self.embeddings)} items)")
                 return
             else:
-                print("⚠️  Data has changed, embeddings need to be regenerated")
+                print("Data has changed, embeddings need to be regenerated")
         
         # Generate embeddings
         print(f"🔄 Generating embeddings for {len(self.df)} movie titles...")
@@ -107,7 +100,7 @@ class MovieTitleRAGTranslator:
                 'embeddings': self.embeddings,
                 'titles': self.df['korean_title'].tolist()
             }, f)
-        print(f"✅ Embeddings generated and cache saved")
+        print(f"Embeddings generated and cache saved")
     
     def search_relevant_movies(
         self, 
@@ -117,14 +110,6 @@ class MovieTitleRAGTranslator:
     ) -> List[Dict]:
         """
         Search for movie titles similar to the query
-        
-        Args:
-            query: Search query (text to translate)
-            top_k: Return top k results
-            threshold: Similarity threshold (exclude below this)
-            
-        Returns:
-            List of retrieved movie information
         """
         # Query embedding
         query_embedding = self._get_embedding(query).reshape(1, -1)
@@ -167,7 +152,7 @@ class MovieTitleRAGTranslator:
         """
         if verbose:
             print(f"\n{'='*60}")
-            print(f"📝 Original: {text}")
+            print(f"Original: {text}")
             print(f"{'='*60}")
         
         # 1. Search relevant movies
@@ -234,7 +219,7 @@ Context (Official Movie Title Translations):
             return translation
             
         except Exception as e:
-            print(f"❌ Error during translation: {e}")
+            print(f"Error during translation: {e}")
             return None
     
     def translate_without_rag(
@@ -270,17 +255,17 @@ Output ONLY the translated text without any explanations."""
             return response.choices[0].message.content.strip()
             
         except Exception as e:
-            print(f"❌ Error during translation: {e}")
+            print(f"Error during translation: {e}")
             return None
 
 
 def demo():
     """Run demo"""
-    print("🎬 Movie Title RAG Translation System Demo\n")
+    print("Movie Title RAG Translation System Demo\n")
     
     # Check OpenAI API Key
     if not os.getenv("OPENAI_API_KEY"):
-        print("❌ OPENAI_API_KEY is not set!")
+        print("OPENAI_API_KEY is not set!")
         print("   Please add OPENAI_API_KEY to your .env file.")
         return
     
@@ -297,20 +282,20 @@ def demo():
     ]
     
     print("\n" + "="*60)
-    print("🎯 RAG Translation vs Regular Translation Comparison")
+    print("RAG Translation vs Regular Translation Comparison")
     print("="*60)
     
     for sentence in test_sentences:
-        print(f"\n📝 Original: {sentence}")
+        print(f"\nOriginal: {sentence}")
         print("-" * 60)
         
         # RAG translation
         rag_result = translator.translate_with_rag(sentence, verbose=False)
-        print(f"✅ RAG translation: {rag_result}")
+        print(f"RAG translation: {rag_result}")
         
         # Regular translation
         normal_result = translator.translate_without_rag(sentence)
-        print(f"❌ Regular translation: {normal_result}")
+        print(f"Regular translation: {normal_result}")
         print()
 
 

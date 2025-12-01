@@ -1,6 +1,6 @@
 """
 Movie title translation accuracy evaluation system
-Quantitatively compare performance before and after applying RAG
+Compare performance before and after applying RAG (Quantitatively)
 """
 
 import os
@@ -28,7 +28,6 @@ def set_korean_font():
         print("🐧 Linux detected: Using NanumGothic font")
     else:
         print(f"⚠️  Unknown OS ({system}): Using default font")
-        # Fallback: use sans-serif
         plt.rcParams['font.family'] = 'sans-serif'
     
     plt.rcParams['axes.unicode_minus'] = False  # Prevent minus sign rendering issues
@@ -94,13 +93,6 @@ class TranslationEvaluator:
     ) -> bool:
         """
         Check if the correct movie title is included in the translation
-        
-        Args:
-            translation: Translated sentence
-            expected_title: Expected English title
-            
-        Returns:
-            True if the title is correctly included
         """
         if not translation:
             return False
@@ -118,13 +110,6 @@ class TranslationEvaluator:
     ) -> Dict:
         """
         Evaluate a single test case
-        
-        Args:
-            test_case: Test case
-            use_rag: Whether to use RAG
-            
-        Returns:
-            Evaluation result
         """
         korean_sentence = test_case['korean_sentence']
         expected_title = test_case['movie_title_english']
@@ -154,12 +139,6 @@ class TranslationEvaluator:
     def run_evaluation(self, num_samples: int = None) -> Tuple[pd.DataFrame, pd.DataFrame]:
         """
         Run full evaluation
-        
-        Args:
-            num_samples: Number of samples to evaluate (None for all)
-            
-        Returns:
-            (RAG results DataFrame, regular translation results DataFrame)
         """
         test_cases = self.test_cases[:num_samples] if num_samples else self.test_cases
         
@@ -183,7 +162,7 @@ class TranslationEvaluator:
             # Regular translation evaluation
             normal_result = self.evaluate_single_case(test_case, use_rag=False)
             normal_results.append(normal_result)
-            print(f"  ❌ Regular: {normal_result['translation']}")
+            print(f" Regular: {normal_result['translation']}")
             print(f"     {'✓ Correct' if normal_result['is_correct'] else '✗ Incorrect'}")
         
         print("\n" + "="*80)
@@ -198,13 +177,6 @@ class TranslationEvaluator:
     ) -> Dict:
         """
         Calculate evaluation metrics
-        
-        Args:
-            rag_df: RAG results DataFrame
-            normal_df: Regular translation results DataFrame
-            
-        Returns:
-            Metrics dictionary
         """
         metrics = {
             'rag_accuracy': (rag_df['is_correct'].sum() / len(rag_df)) * 100,
@@ -222,9 +194,6 @@ class TranslationEvaluator:
     def print_summary(self, metrics: Dict):
         """
         Print evaluation summary
-        
-        Args:
-            metrics: Evaluation metrics
         """
         print("\n" + "="*80)
         print("📊 Evaluation Summary")
@@ -242,14 +211,14 @@ class TranslationEvaluator:
               f"{metrics['total_cases'] - metrics['normal_correct_count']:4d}     │")
         print("└─────────────────────┴──────────┴──────────┴──────────┘")
         
-        print(f"\n🚀 Improvement: {metrics['improvement']:+.2f}%p")
+        print(f"\nImprovement: {metrics['improvement']:+.2f}%p")
         
         if metrics['improvement'] > 0:
-            print(f"✅ RAG implementation improved translation accuracy by {metrics['improvement']:.1f}%p!")
+            print(f"RAG implementation improved translation accuracy by {metrics['improvement']:.1f}%p!")
         elif metrics['improvement'] == 0:
-            print("➖ RAG implementation effect is minimal.")
+            print(" RAG implementation effect is minimal.")
         else:
-            print("⚠️  RAG implementation actually decreased accuracy. System review needed.")
+            print("RAG implementation actually decreased accuracy. System review needed.")
     
     def visualize_results(
         self, 
@@ -258,10 +227,6 @@ class TranslationEvaluator:
     ):
         """
         Visualize results
-        
-        Args:
-            metrics: Evaluation metrics
-            save_path: Graph save path
         """
         # Create results directory
         os.makedirs(os.path.dirname(save_path), exist_ok=True)
@@ -328,11 +293,6 @@ class TranslationEvaluator:
     ):
         """
         Save detailed results to CSV
-        
-        Args:
-            rag_df: RAG results DataFrame
-            normal_df: Regular translation results DataFrame
-            save_path: CSV save path
         """
         os.makedirs(os.path.dirname(save_path), exist_ok=True)
         
@@ -356,7 +316,7 @@ class TranslationEvaluator:
 
 def main():
     """Run main evaluation"""
-    print("🎬 Movie Title Translation Evaluation System")
+    print("Movie Title Translation Evaluation System")
     print("="*80)
     
     # Initialize evaluation system
@@ -382,7 +342,7 @@ def main():
     evaluator.save_detailed_results(rag_df, normal_df)
     
     print("\n" + "="*80)
-    print("✅ All evaluations complete!")
+    print("All evaluations complete!")
     print("   - Graph: results/accuracy_comparison.png")
     print("   - Detailed results: results/evaluation_results.csv")
     print("="*80)

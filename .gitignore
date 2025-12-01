@@ -4,3 +4,5 @@
 __pycache__/
 data/movie_titles.csv
 *.log
+
+Report.md

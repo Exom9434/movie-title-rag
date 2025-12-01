@@ -159,10 +159,10 @@ def main():
         print("   예시: TMDB_API_KEY=your_api_key_here")
         return
     
-    # 1. 인기 한국 영화 수집
-    print("1. 인기 한국 영화 수집 중...")
+    # 1. Collect popular Korean movies
+    print("1️⃣ Collecting popular Korean movies...")
     movies = get_popular_korean_movies(num_pages=5) 
-    print(f"   수집된 영화: {len(movies)}편\n")
+    print(f"   Movies collected: {len(movies)}\n")
     
     # 2. 한국어-영어 제목 쌍 추출
     print("2. 영어 제목 수집 중...")
